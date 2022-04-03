@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Website Layout</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* Style the header */
+.header {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+}
+
+.header img{
+  width: 80px;
+  float: right;
+}
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Create three unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 100px;
+}
+
+/* Left and right column */
+.column.side {
+  width: 25%;
+}
+
+/* Middle column */
+.column.left {
+  width: 50%;
+  vertical-align: middle;
+  
+  padding: 10px 10px;
+  
+}
+
+.column.right {
+  width: 50%;
+  height: auto;
+  vertical-align: middle;
+  
+  padding: 10px 10px;
+  
+  
+  
+}
+
+.video-div {
+  
+  height: 300px;
+  overflow: hidden;
+  
+}
+.row {
+  border-bottom: 3px solid black;
+  background-color: grey;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.video-iframe {
+  
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 1100px) {
+  .column.left, .column.right {
+    width: 100%;
+  }
+
+}
+</style>
+</head>
+<body>
+
+<div class="header" id="top">
+  <img src="/bodybuilding-sport-club-emblem-vector-12427816.jpg" alt="">
+  <h1>Kondi termi projekt</h1>
+  <p>9 gyakorlat, amit végezhetsz kezdőként!</p>
+</div>
+
+<div class="topnav">
+  <a href="#1">Lehúzás bicepszre</a>
+  <a href="#2">Kitörés</a>
+  <a href="#">Fekvőtámasz</a>
+</div>
+
+<div class="row" id="1">
+  
+  <div class="column left">
+    <h2>Lehúzás bicepszre</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+    
+    <a href="#top"><h3>vissza az elejére</h3></a>
+  </div>
+
+  <div class="column right">
+    <div class="video-div">
+      <iframe  src="https://player.vimeo.com/video/130071059?autoplay=0&amp;title=0&amp;byline=0&amp;portrait=0" allow="fullscreen; picture-in-picture" allowfullscreen="allowfullscreen" class="video-iframe"></iframe><!--felső lehúzás-->
+  </div>
+  </div>
+  
+  
+   
+</div>
+
+<div class="row" id="2">
+  
+  <div class="column left">
+    <h2>Kitörés</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+    
+    <a href="#top"><h3>vissza az elejére</h3></a>
+  </div>
+
+  <div class="column right">
+    <div class="video-div">
+      <iframe data-v-67d7f059="" src="https://player.vimeo.com/video/130221745?autoplay=0&amp;title=0&amp;byline=0&amp;portrait=0" allow="fullscreen; picture-in-picture" allowfullscreen="allowfullscreen" class="video-iframe"></iframe><!--kitörés-->
+  </div>
+  </div>
+  
+  
+   
+</div>
+</body>
+</html>
+
+
