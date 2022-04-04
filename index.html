@@ -106,11 +106,40 @@ body {
 }
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 600px) {
   .column.left, .column.right {
     width: 100%;
   }
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
 
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+.topnav .icon {
+  display: none;
+}
+.menu {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 3px 0;
 }
 </style>
 </head>
@@ -122,10 +151,16 @@ body {
   <p>9 gyakorlat, amit végezhetsz kezdőként!</p>
 </div>
 
-<div class="topnav">
+<div class="topnav" id="myTopnav">
   <a href="#1">Lehúzás bicepszre</a>
   <a href="#2">Kitörés</a>
   <a href="#">Fekvőtámasz</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <div class="menu"></div>
+    <div class="menu"></div>
+    <div class="menu"></div>
+  </a>
+</div>
 </div>
 
 <div class="row" id="1">
@@ -165,6 +200,17 @@ body {
   
    
 </div>
+
+<script>
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+  </script>
 </body>
 </html>
 
